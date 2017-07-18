@@ -53,7 +53,7 @@
         <antcall target="deployTarget" />
     </target>
     <target name="deployTarget">
-        <copy file="${base}/JavaDemoApp.war" todir="${tomcat.deployment}"/>
+        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows/files/default"/>
         <antcall target="startTarget" />
     </target>
     <target name="startTarget">
