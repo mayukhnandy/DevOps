@@ -50,11 +50,11 @@
             <classes dir="${classes.dir}"/>
             <fileset dir="${pages}"/>
         </war>
-        <antcall target="deployTarget" />
+        <antcall target="deployTarget_Staging" />
     </target>
     <target name="deployTarget_Staging">
         <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows/files/default"/>
-        <antcall target="startTarget" />
+        <antcall target="deployTarget_Production" />
     </target>
 	<target name="deployTarget_Production">
         <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows_production/files/default"/>
