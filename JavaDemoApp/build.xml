@@ -53,11 +53,11 @@
         <antcall target="deployTarget_Staging" />
     </target>
     <target name="deployTarget_Staging">
-        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows/files/default"/>
+        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/test_cookbook/files/default"/>
         <antcall target="deployTarget_Production" />
     </target>
 	<target name="deployTarget_Production">
-        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows_production/files/default"/>
+        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_linux_production/files/default"/>
         <antcall target="startTarget" />
 	 </target>
     <target name="startTarget">
