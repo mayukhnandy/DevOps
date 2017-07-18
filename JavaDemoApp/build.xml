@@ -52,10 +52,14 @@
         </war>
         <antcall target="deployTarget" />
     </target>
-    <target name="deployTarget">
+    <target name="deployTarget_Staging">
         <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows/files/default"/>
         <antcall target="startTarget" />
     </target>
+	<target name="deployTarget_Production">
+        <copy file="${base}/JavaDemoApp.war" todir="C:/Users/ac221/learn-chef/cookbooks/deployment_windows_production/files/default"/>
+        <antcall target="startTarget" />
+	 </target>
     <target name="startTarget">
         <exec executable="${tomcat.bin}/startup.bat"/>
     </target>
