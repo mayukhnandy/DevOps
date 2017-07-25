@@ -18,6 +18,7 @@ public class UserServlet extends HttpServlet {
         repo.addUsersToRepository();
     }
 
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException  {
 		String username = request.getParameter("userId");
         String password = request.getParameter("password");
@@ -29,8 +30,6 @@ public class UserServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		// comment 11
 		doGet(request, response);
 	}
 
