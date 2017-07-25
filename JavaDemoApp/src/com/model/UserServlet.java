@@ -18,12 +18,11 @@ public class UserServlet extends HttpServlet {
         repo.addUsersToRepository();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException  {
 		String username = request.getParameter("userId");
         String password = request.getParameter("password");
         if(username.equals("admin") && password.equals("admin") ){
-        	//System.out.println("Valid Usernam And Password");
-        	response.sendRedirect("ViewDemoPage.html");
+        	      	response.sendRedirect("ViewDemoPage.html");
         }
         else
 		 response.sendRedirect("errorPage.jsp");
