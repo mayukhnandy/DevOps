@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaDemoApp" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+	<!-- ========= Define the main properties of this project ========= -->
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="target" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	
+	<!-- Define the Sonar properties -->
+	<property name="sonar.projectKey" value="org.codehaus.sonar:TestProject5003" />
+	<property name="sonar.projectName" value="JavaDemoApp" />
+	<property name="sonar.projectVersion" value="1.1" />
+	<property name="sonar.language" value="java" />
+	<property name="sonar.sources" value="src" />
+	<property name="sonar.binaries" value="target" />
+	<property name="sonar.sourceEncoding" value="UTF-8" />
+	
+	<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://192.168.1.157:1433/sonar;SelectMethod=Cursor" />
+	<property name="sonar.jdbc.username" value="sa" />
+<property name="sonar.jdbc.password" value="kov$2010$air" />
+
+
+	
+<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" fork="true" debug="true" includeAntRuntime="false" />
+	</target>
+
+	<!-- ========= Define Sonar target ========= -->
+	<target name="sonar" depends="compile">
+		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+			<classpath path="C:/Users/ac221/Desktop/Sonar-ant/sonar-ant-task-2.3.jar" />
+		</taskdef>
+		
+		<!-- Execute Sonar -->
+		<sonar:sonar />
+	</target>
+
+	<!-- ========= The main target "all" ========= -->
+	<target name="all" depends="clean,compile,sonar" />
+
+	</project>
