@@ -1,52 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="JavaDemoApp" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+	<project basedir="." default="all" name="DV1App" xmlns:sonar="antlib:org.sonar.ant">
+		<property environment="env"/>
+		<property name="ECLIPSE_HOME" value="../../../../eclipse/"/>
+		<property name="debuglevel" value="source,lines,vars"/>
+		<property name="target" value="1.7"/>
+		<property name="source" value="1.7"/>
 
-	<!-- ========= Define the main properties of this project ========= -->
-	<property name="src.dir" value="src" />
-	<property name="build.dir" value="target" />
-	<property name="classes.dir" value="${build.dir}/classes" />
-	
-	<!-- Define the Sonar properties -->
-	<property name="sonar.projectKey" value="org.codehaus.sonar:JavaDemoApp" />
-	<property name="sonar.projectName" value="JavaDemoApp" />
-	<property name="sonar.projectVersion" value="1.1" />
-	<property name="sonar.language" value="java" />
-	<property name="sonar.sources" value="src" />
-	<property name="sonar.binaries" value="target" />
-	<property name="sonar.sourceEncoding" value="UTF-8" />
-	
-	<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://192.168.1.157:1433/sonar;SelectMethod=Cursor" />
-	<property name="sonar.jdbc.username" value="sa" />
-	<property name="sonar.jdbc.password" value="kov$2010$air" />
-
-
-	
-<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
-	<target name="clean">
-		<delete dir="${build.dir}" />
-	</target>
-
-	<target name="init">
-		<mkdir dir="${build.dir}" />
-		<mkdir dir="${classes.dir}" />
-	</target>
-
-	<target name="compile" depends="init">
-		<javac srcdir="${src.dir}" destdir="${classes.dir}" fork="true" debug="true" includeAntRuntime="false" />
-	</target>
-
-	<!-- ========= Define Sonar target ========= -->
-	<target name="sonar" depends="compile">
-		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
-			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-			<classpath path="C:/Users/ac221/Desktop/Sonar-ant/sonar-ant-task-2.3.jar" />
-		</taskdef>
+		<!-- Define the Sonar properties -->
+		<property name="sonar.host.url" value="http://192.168.1.179:9000" />
 		
-		<!-- Execute Sonar -->
-		<sonar:sonar />
-	</target>
+		<property name="sonar.projectName" value="JavaDemoApp" />
+		<property name="sonar.projectKey" value="JavaDemoApp" />
+		<property name="sonar.projectVersion" value="1.0" />
+		<property name="sonar.language" value="java" />
+		<property name="sonar.sources" value="src" />
+		<property name="sonar.binaries" value="target" />
+		<property name="sonar.sourceEncoding" value="UTF-8" />   
+		<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://192.168.1.157:1433/sonar;SelectMethod=Cursor" />
+		<property name="sonar.jdbc.username" value="sa" />
+		<property name="sonar.jdbc.password" value="kov$2010$air" />
 
-	<!-- ========= The main target "all" ========= -->
-	<target name="all" depends="clean,compile,sonar" />
+		<path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/annotations-api.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/catalina-ant.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/catalina-ha.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/catalina-tribes.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/catalina.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/ecj-4.4.2.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/el-api.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/jasper-el.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/jasper.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/jsp-api.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/servlet-api.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-api.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-coyote.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-dbcp.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-i18n-es.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-i18n-fr.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-i18n-ja.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-jdbc.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat-util.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/tomcat7-websocket.jar"/>
+			<pathelement location="../../../../WebServer/apache-tomcat-7.0.79/lib/websocket-api.jar"/>
+		</path>
+		<path id="Web App Libraries.libraryclasspath"/>
+		<path id="EAR Libraries.libraryclasspath"/>
+		<path id="DV1App.classpath">
+			<pathelement location="WebContent/WEB-INF/classes"/>
+			<path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+			<path refid="Web App Libraries.libraryclasspath"/>
+			<path refid="EAR Libraries.libraryclasspath"/>
+			<pathelement location="C:\Users\ac221\Desktop\Sonar-ant\sonar-ant-task-2.3.jar"/>
+		</path>
+	    <target depends="init" name="build"/>
+		<target name="init">
+			<mkdir dir="WebContent/WEB-INF/classes"/>
+			<copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
+				<fileset dir="src">
+					<exclude name="**/*.java"/>
+				</fileset>
+			</copy>
+		</target>
+		<target name="clean">
+			<delete dir="WebContent/WEB-INF/classes"/>
+		</target>
+
+		<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+		<target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+			<copy todir="${ant.library.dir}">
+				<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+			</copy>
+			<unzip dest="${ant.library.dir}">
+				<patternset includes="jdtCompilerAdapter.jar"/>
+				<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+			</unzip>
+		</target>
+		<target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+			<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<antcall target="build"/>
+		</target>
+
+		<target name="sonar" depends="build">
+			<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+				<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+				<classpath path="C:/Users/sm222/Documents/Eclipse/eclipseluna/eclipse/plugins/org.apache.ant_1.9.2.v201404171502/lib/sonar-ant-task-2.3.jar" />
+			</taskdef>           		
+			<!-- Execute Sonar -->
+			<sonar:sonar />
+		</target>
+
+		<!-- ========= The main target "all" ========= -->
+		<!--target name="all" depends="clean,build,build-subprojects,build-project,build-refprojects,init-eclipse-compiler,build-eclipse-compiler,sonar" /-->
+		<target name="all" depends="clean,build,sonar" />
 
 	</project>
+	
