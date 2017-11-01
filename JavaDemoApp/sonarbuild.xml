@@ -16,7 +16,7 @@
 		
 		<property name="sonar.projectName" value="JavaDemoApp" />
 		<property name="sonar.projectKey" value="JavaDemoApp" />
-		<property name="sonar.projectVersion" value="1.0" />
+		<property name="sonar.projectVersion" value="1.2" />
 		<property name="sonar.language" value="java" />
 		<property name="sonar.sources" value="src" />
 		<property name="sonar.binaries" value="target" />
