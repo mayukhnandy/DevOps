@@ -21,7 +21,7 @@
 		<property name="sonar.sources" value="src" />
 		<property name="sonar.binaries" value="target" />
 		<property name="sonar.sourceEncoding" value="UTF-8" />   
-		<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://10.10.1.39:1433/sonar;SelectMethod=Cursor" />
+		<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://10.10.1.39/sonar;SelectMethod=Cursor" />
 		<property name="sonar.jdbc.username" value="sa" />
 		<property name="sonar.jdbc.password" value="kov$2010$air" />
 
@@ -55,7 +55,7 @@
 			<path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
 			<path refid="Web App Libraries.libraryclasspath"/>
 			<path refid="EAR Libraries.libraryclasspath"/>
-			<pathelement location="C:\Users\ac221\Desktop\Sonar-ant\sonar-ant-task-2.3.jar"/>
+			<pathelement location="C:\Users\ac221\Desktop\Sonar-ant\sonarqube-ant-task-2.3.jar"/>
 		</path>
 	    <target depends="init" name="build"/>
 		<target name="init">
