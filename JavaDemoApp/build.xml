@@ -37,10 +37,10 @@
         <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
         <pathelement location="C:/WebServer/apache-tomcat-7.0.79-windows-x64/apache-tomcat-7.0.79/lib/tomcat-util.jar"/>
     </path>
-    <target name="clean">
+    <!--<target name="clean">
         <delete dir="${build.dir}" />
-    </target>
-    <target name="compile" depends="clean">
+    </target>-->
+    <target name="compile">
         <mkdir dir="${classes.dir}"/>
         <javac srcdir="${src.dir}" destdir="${classes.dir}"
             classpathref="JavaDemoApp.classpath" includeantruntime="false" />
