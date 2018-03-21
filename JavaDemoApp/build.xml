@@ -5,8 +5,8 @@
     <property name="tomcat.deployment" value="${tomcat}/webapps" />
     <property name="tomcat.bin" value="${tomcat}/bin" />
     <property name="base" value="." />
-    <property name="src.dir"     value="${base}/src"/>
-    <property name="build.dir"   value="${base}/build"/>
+    <property name="src.dir" value="${base}/src"/>
+    <property name="build.dir" value="${base}/build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="pages" value="${base}/WebContent" />
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">

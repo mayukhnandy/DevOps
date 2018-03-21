@@ -20,6 +20,7 @@
 		<property name="sonar.language" value="java" />
 		<property name="sonar.sources" value="src" />
 		<property name="sonar.binaries" value="target" />
+		<property name="sonar.java.binaries" value="target/classes" />
 		<property name="sonar.sourceEncoding" value="UTF-8" />   
 		<!--<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://10.10.1.39:1433/sonar;SelectMethod=Cursor" />
 		<property name="sonar.jdbc.username" value="sa" />
