@@ -12,7 +12,7 @@
 		<property name="source" value="1.7"/>
 
 		<!-- Define the Sonar properties -->
-		<property name="sonar.host.url" value="http://10.10.1.59:9000" />
+		<property name="sonar.host.url" value="http://10.10.1.27:9000" />
 		
 		<property name="sonar.projectName" value="JavaDemoApp" />
 		<property name="sonar.projectKey" value="JavaDemoApp" />
@@ -22,9 +22,9 @@
 		<property name="sonar.binaries" value="target" />
 		<property name="sonar.java.binaries" value="target/classes" />
 		<property name="sonar.sourceEncoding" value="UTF-8" />   
-		<!--<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://10.10.1.39:1433/sonar;SelectMethod=Cursor" />-->
+		<property name="sonar.jdbc.url" value="jdbc:jtds:sqlserver://10.10.1.39:1433/sonar;SelectMethod=Cursor" />
 		
-		<property name="sonar.jdbc.url" value="jdbc:sqlserver://10.10.1.39;databasename=SonarQube6.5_DB" />
+		<!--<property name="sonar.jdbc.url" value="jdbc:sqlserver://10.10.1.39;databasename=SonarQube6.5_DB" />-->
 		<property name="sonar.jdbc.username" value="sa" />
 		<property name="sonar.jdbc.password" value="kov$2010$air" />
 
